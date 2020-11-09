@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    height: 100%;
+}
+.mixin-flex(@flex:flex, @center:center, @space:space-evenly) {/*MIXIN*/
+	display: @flex;
+	justify-content: @space;
+	align-items:@center;
+}
+
+.content {
+    width: 80%;
+    height: 400px;
+    background-color: orange;
+    .mixin-flex(flex, center, space-evenly);
+}
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.box2 {
+   .box1;
+}
+
+.box3 {
+    .box1;
+  
+ }
